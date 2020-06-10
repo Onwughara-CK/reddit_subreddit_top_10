@@ -38,7 +38,7 @@ def mail_gun():
     return mail
 
 
-@sched.scheduled_job('interval', minutes=1)
+@sched.scheduled_job('interval', hours=24)
 def send_mail():
     try:
         # your gmail address and password. but you must set your gmail address to allow less secure apps.
