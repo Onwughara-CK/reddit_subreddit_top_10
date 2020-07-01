@@ -5,11 +5,11 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 sched = BlockingScheduler()
 
 
-reddit = praw.Reddit(client_id='M8UOB3CGRiUmww',
-                     client_secret='mCp7pbzuUelnB_zGdKztbTcvarA',
-                     password='158303aTm',
-                     user_agent='PyEng Boto 0.1',
-                     username='coddins')
+reddit = praw.Reddit(client_id='x',
+                     client_secret='x',
+                     password='x',
+                     user_agent='x',
+                     username='x')
 
 subs = [
     'learnpython', 'beermoney', 'slavelabour',
@@ -45,18 +45,17 @@ def mail_gun():
 def send_mail():
 
     msg = MIMEText(mail_gun())
-    msg['From'] = 'kelechicollins93@yahoo.com'
-    msg['To'] = 'kelechicollins93@gmail.com'
+    msg['From'] = 'x'
+    msg['To'] = 'x'
     msg['Subject'] = 'Subject: Reddit Top 10 daily.'
 
     try:
         smtpObj = smtplib.SMTP('smtp.mail.yahoo.com', 587)
         smtpObj.ehlo()
         smtpObj.starttls()
-        smtpObj.login('kelechicollins93@yahoo.com', 'cmpztawzbohdqnpx')
+        smtpObj.login('x', 'x')  # add yahoo address and 12 digit password
         text = msg.as_string()
-        smtpObj.sendmail('kelechicollins93@yahoo.com',
-                         'kelechicollins93@gmail.com', text)
+        smtpObj.sendmail('x', 'x', text)  # from and to ( yahoo,gmail)
         print('successfully sent you the mail')
     except Exception as e:
         print('error', e)
